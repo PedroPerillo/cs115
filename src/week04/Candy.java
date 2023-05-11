@@ -22,7 +22,7 @@ public class Candy extends DessertItem {
     }
 
     //argument constructor
-    public Candy(double candyWeight, double pricePerPound, String name){
+    public Candy( String name, double candyWeight, double pricePerPound){
         super(name);
         this.candyWeight = 0;
         this.setCandyWeight(candyWeight);//this meas the class

@@ -16,13 +16,13 @@ public class Sundae extends IceCream {
 
     //no argument constructor
     public Sundae(){
-        super(0,0,"Sundae");
+        super("Sundae", 0,0);
         toppingName = "";
         toppingPrice = 0;
     }
     //argument constructor
-    public Sundae(String toppingName, double toppingPrice, int scoopCount, double pricePerScoop, String name){
-        super(scoopCount, pricePerScoop, name);
+    public Sundae(String toppingName, int scoopCount, double toppingPrice, String name, double pricePerScoop){
+        super(name, scoopCount, pricePerScoop);
         this.toppingName = toppingName;//this meas the class
         this.toppingPrice = toppingPrice;
     }

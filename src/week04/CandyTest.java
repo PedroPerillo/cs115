@@ -16,13 +16,13 @@ class CandyTest {
 
     @Test
     void getCandyWeight() {
-        Candy candy = new Candy(10,5.00,"Chocolate");
+        Candy candy = new Candy("Chocolate",10,5.00);
         assertEquals(10,candy.getCandyWeight());
     }
 
     @Test
     void setCandyWeight() {
-        Candy candySet = new Candy(10,5.00,"Chocolate");
+        Candy candySet = new Candy("Chocolate",10,5.00);
         candySet.setCandyWeight(15);
         assertEquals(15,candySet.getCandyWeight());
 
@@ -30,26 +30,26 @@ class CandyTest {
 
     @Test
     void getPricePerPound() {
-        Candy candy = new Candy(10,5.00,"Chocolate");
+        Candy candy = new Candy("Chocolate",10,5.00);
         assertEquals(5.00,candy.getPricePerPound());
     }
 
     @Test
     void setPricePerPound() {
-        Candy candySet = new Candy(10,5.00,"Chocolate");
+        Candy candySet = new Candy("Chocolate",10,5.00);
         candySet.setPricePerPound(10.00);
         assertEquals(10.00,candySet.getPricePerPound());
     }
    @Test
 
    void setCandyWeightNeg() {
-        Candy candySet = new Candy(10,5.00,"Chocolate");
+        Candy candySet = new Candy("Chocolate",10,5.00);
         candySet.setCandyWeight(-10);
         assertEquals(10,candySet.getCandyWeight());
     }
     @Test
     void setPricePerPoundNeg() {
-        Candy candySet = new Candy(10,5.00,"Chocolate");
+        Candy candySet = new Candy("Chocolate",10,5.00);
         candySet.setPricePerPound(-10.00);
         assertEquals(5.00,candySet.getPricePerPound());
     }

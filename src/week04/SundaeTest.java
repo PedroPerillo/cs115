@@ -16,33 +16,33 @@ class SundaeTest {
 
     @Test
     void getToppingName() {
-        Sundae sundae = new Sundae("Sprinkles", 1.50,2,2.5,"Sprinkle Sundae");
+        Sundae sundae = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
         assertEquals("Sprinkles",sundae.getToppingName());
     }
 
     @Test
     void setToppingName() {
-        Sundae sundaeSet = new Sundae("Sprinkles", 1.50,2,2.5,"Sprinkle Sundae");
+        Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
         sundaeSet.setToppingName("Caramel");
         assertEquals("Caramel",sundaeSet.getToppingName());
     }
 
     @Test
     void getToppingPrice() {
-        Sundae sundae = new Sundae("Sprinkles", 1.50,2,2.5,"Sprinkle Sundae");
+        Sundae sundae = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
         assertEquals(1.50,sundae.getToppingPrice());
     }
 
     @Test
     void setToppingPrice() {
-        Sundae sundaeSet = new Sundae("Sprinkles", 1.50,2,2.5,"Sprinkle Sundae");
+        Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
         sundaeSet.setToppingPrice(2.00);
         assertEquals(2.00,sundaeSet.getToppingPrice());
     }
 
     @Test
     void setToppingPriceNeg() {
-        Sundae sundaeSet = new Sundae("Sprinkles", 1.50,2,2.5,"Sprinkle Sundae");
+        Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
         sundaeSet.setToppingPrice(-2.00);
         assertEquals(1.50,sundaeSet.getToppingPrice());
     }

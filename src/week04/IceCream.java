@@ -22,7 +22,7 @@ public class IceCream extends DessertItem  {
     }
 
     //argument constructor
-    public IceCream(int scoopCount, double pricePerScoop,String name){
+    public IceCream(String name, int scoopCount, double pricePerScoop){
         super(name);
         this.scoopCount = scoopCount;
         this.pricePerScoop = pricePerScoop;

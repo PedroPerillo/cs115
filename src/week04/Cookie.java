@@ -22,7 +22,7 @@ public class Cookie extends DessertItem {
     }
 
     //argument constructor
-    public Cookie(int cookieQty, double pricePerDozen, String name){
+    public Cookie( String name, int cookieQty, double pricePerDozen){
         super(name);
         this.cookieQty = cookieQty;
         this.pricePerDozen = pricePerDozen;
