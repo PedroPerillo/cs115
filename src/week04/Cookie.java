@@ -48,4 +48,9 @@ public class Cookie extends DessertItem {
             this.pricePerDozen = pricePerDozen;
         }
     }
+    //Cost Methods
+    @Override
+    public double calculateCost() {
+        return (cookieQty*pricePerDozen)/12;
+    }
 }

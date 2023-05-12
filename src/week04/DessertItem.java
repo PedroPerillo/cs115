@@ -11,9 +11,10 @@ package week04;
 
 import java.time.LocalDate;
 
-public class DessertItem {
+public abstract class DessertItem {
     //Attributes
     private String name;
+    private double taxPercent = 7.25;
     //No argument constructor
     public DessertItem(){
         name = "Dessert";
@@ -33,4 +34,20 @@ public class DessertItem {
     public void setName(String name) {
         this.name = name;
     }
+
+    public double getTaxPercent() {
+        return taxPercent;
+    }
+
+    public void setTaxPercent(double taxPercent) {
+        this.taxPercent = taxPercent;
+    }
+
+    //Tax Methods
+    public abstract double calculateCost();
+    public double calculateTax(){
+        return (taxPercent/100) * calculateCost();
+    }
+
+
 }

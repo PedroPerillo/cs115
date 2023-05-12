@@ -45,4 +45,8 @@ public class Sundae extends IceCream {
             this.toppingPrice = toppingPrice;
         }
     }
+    public double calculateCost() {
+        return super.calculateCost()+toppingPrice;
+
+    }
 }

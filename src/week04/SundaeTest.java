@@ -47,4 +47,15 @@ class SundaeTest {
         assertEquals(1.50,sundaeSet.getToppingPrice());
     }
 
+    @Test
+    void calculateCost() {
+        Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
+        assertEquals(6.5,sundaeSet.calculateCost());
+    }
+
+    @Test
+    void calculateTax() {
+        Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
+        assertEquals(6.5*(7.25/100),sundaeSet.calculateTax());
+    }
 }

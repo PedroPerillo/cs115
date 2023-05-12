@@ -54,4 +54,15 @@ class IceCreamTest {
         assertEquals(2.00, iceCreamSet.getPricePerScoop());
     }
 
+    @Test
+    void calculateCost() {
+        IceCream iceCreamSet = new IceCream("Mint Chocolate Chip",2, 2.00);
+        assertEquals(4,iceCreamSet.calculateCost());
+    }
+
+    @Test
+    void calculateTax() {
+        IceCream iceCreamSet = new IceCream("Mint Chocolate Chip",2, 2.00);
+        assertEquals(4*(7.25/100),iceCreamSet.calculateTax());
+    }
 }

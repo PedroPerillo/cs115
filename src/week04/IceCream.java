@@ -48,4 +48,9 @@ public class IceCream extends DessertItem  {
             this.pricePerScoop = pricePerScoop;
         }
     }
+    //Cost Methods
+    @Override
+    public double calculateCost() {
+        return scoopCount*pricePerScoop;
+    }
 }

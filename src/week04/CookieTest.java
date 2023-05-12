@@ -54,4 +54,15 @@ class CookieTest {
         assertEquals(5.00, cookieSet.getPricePerDozen());
     }
 
+    @Test
+    void calculateCost() {
+        Cookie cookieSet = new Cookie("Chocolate Chip",10, 5.00);
+        assertEquals((double) 50 /12,cookieSet.calculateCost());
+    }
+
+    @Test
+    void calculateTax() {
+        Cookie cookieSet = new Cookie("Chocolate Chip",10, 5.00);
+        assertEquals(((double) 50 /12)*(7.25/100),cookieSet.calculateTax());
+    }
 }

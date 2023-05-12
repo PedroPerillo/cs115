@@ -1,37 +1,36 @@
-/*
- * File: The name of the file such as Person.java
- * Description: A short description of the project.  This does not need to be long.
- * Instructor's Name: Jeffrey Light
- *
- * @author: Pedro Fonseca Perillo
- * @since: May 4, 2023
- */
 package week04;
 
 import org.junit.jupiter.api.Test;
-import week02.Person;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DessertItemTest {
 
     @Test
-    void Constructor() {
-        DessertItem dessertItem = new DessertItem();
-        assertEquals("Dessert",dessertItem.getName());
+    void getName() {
+        DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
+        assertEquals("Ice Cream",iceCream.getName());
     }
 
     @Test
-    void GetName() {
-        DessertItem dessertItem = new DessertItem("Ice Cream");
-        assertEquals("Ice Cream",dessertItem.getName());
+    void setName() {
+        DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
+        iceCream.setName("Pistachio");
+        assertEquals("Pistachio",iceCream.getName());
     }
 
     @Test
-    void SetName() {
-        DessertItem dessertItemSet = new DessertItem("Chocolate");
-        dessertItemSet.setName("Pudding");
-        assertEquals("Pudding", dessertItemSet.getName());
+    void getTaxPercent() {
+        DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
+        double tax = iceCream.getTaxPercent();
+        assertEquals(7.25,tax);
+    }
+
+    @Test
+    void setTaxPercent() {
+        DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
+        iceCream.setTaxPercent(8);
+        assertEquals(8,iceCream.getTaxPercent());
     }
 
 }

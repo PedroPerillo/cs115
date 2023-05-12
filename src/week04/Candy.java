@@ -47,4 +47,10 @@ public class Candy extends DessertItem {
         if(pricePerPound>0){
         this.pricePerPound = pricePerPound;}
     }
+
+    //Cost Methods
+    @Override
+    public double calculateCost() {
+        return candyWeight*pricePerPound;
+    }
 }

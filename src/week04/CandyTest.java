@@ -40,8 +40,8 @@ class CandyTest {
         candySet.setPricePerPound(10.00);
         assertEquals(10.00,candySet.getPricePerPound());
     }
-   @Test
 
+   @Test
    void setCandyWeightNeg() {
         Candy candySet = new Candy("Chocolate",10,5.00);
         candySet.setCandyWeight(-10);
@@ -54,7 +54,15 @@ class CandyTest {
         assertEquals(5.00,candySet.getPricePerPound());
     }
 
+    @Test
+    void calculateCost() {
+        Candy candySet = new Candy("Chocolate",10,5.00);
+        assertEquals(50,candySet.calculateCost());
+    }
 
-
-
+    @Test
+    void calculateTax() {
+        Candy candySet = new Candy("Chocolate",10,5.00);
+        assertEquals(50*(7.25/100),candySet.calculateTax());
+    }
 }
