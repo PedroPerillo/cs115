@@ -20,4 +20,20 @@ public class Order {
         return order.size();
     }
 
+    //methods
+    public double orderCost(){
+        double totalCost = 0;
+        for (DessertItem item : order) {
+            totalCost += item.calculateCost();
+        }
+        return totalCost;
+    }
+    public double orderTax(){
+        double totalTax = 0;
+        for (DessertItem item : order) {
+            totalTax += item.calculateTax();
+        }
+        return totalTax;
+    }
+
 }
