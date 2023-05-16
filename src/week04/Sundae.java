@@ -21,7 +21,7 @@ public class Sundae extends IceCream {
         toppingPrice = 0;
     }
     //argument constructor
-    public Sundae(String toppingName, int scoopCount, double toppingPrice, String name, double pricePerScoop){
+    public Sundae(String name, int scoopCount, double pricePerScoop, String toppingName, double toppingPrice){
         super(name, scoopCount, pricePerScoop);
         this.toppingName = toppingName;//this meas the class
         this.toppingPrice = toppingPrice;
