@@ -1,6 +1,5 @@
-package week05;
+package dessertShop;
 
-import week04.DessertItem;
 
 import java.util.ArrayList;
 import java.util.List;

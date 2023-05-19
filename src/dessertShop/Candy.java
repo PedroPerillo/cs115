@@ -7,7 +7,7 @@
  * @since: May 4, 2023
  */
 
-package week04;
+package dessertShop;
 
 public class Candy extends DessertItem {
     //Attributes
@@ -52,5 +52,27 @@ public class Candy extends DessertItem {
     @Override
     public double calculateCost() {
         return candyWeight*pricePerPound;
+    }
+
+    //toString method
+    public String toString(){
+        String line1 = String.format("%s",this.getName());
+        String line2Pt1 = String.format("%s lbs. @ $%-1.2f/lb.:",this.getCandyWeight(),this.getPricePerPound());
+        String line2Pt2 ="pt2";
+        String line2Pt3="pt3";
+
+       /* String line2_1 ="XX.XX lbs. @ $XX.XX/lb.:"
+        String line2_2 += "$XXX.XX";
+        String line3 = "[Tax: $XXX]";
+
+       String  finalOutput = null;
+
+        finalOutput += "------------------------Receipt-------------------";
+        for (DessertItem item : this.) {
+
+        }
+        */
+        String outputVar = String.format("%s\n\t%-45s%s%17s", line1, line2Pt1, line2Pt2, line2Pt3);
+        return outputVar;
     }
 }

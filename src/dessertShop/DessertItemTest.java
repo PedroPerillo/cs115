@@ -1,4 +1,4 @@
-package week04;
+package dessertShop;
 
 import org.junit.jupiter.api.Test;
 

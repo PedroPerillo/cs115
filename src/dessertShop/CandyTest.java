@@ -6,7 +6,7 @@
  * @author: Pedro Fonseca Perillo
  * @since: May 4, 2023
  */
-package week04;
+package dessertShop;
 
 import org.junit.jupiter.api.Test;
 

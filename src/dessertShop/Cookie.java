@@ -7,7 +7,7 @@
  * @since: May 4, 2023
  */
 
-package week04;
+package dessertShop;
 
 public class Cookie extends DessertItem {
     //Attributes

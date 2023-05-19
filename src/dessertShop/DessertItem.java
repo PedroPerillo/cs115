@@ -7,9 +7,7 @@
  * @since: May 4, 2023
  */
 
-package week04;
-
-import java.time.LocalDate;
+package dessertShop;
 
 public abstract class DessertItem {
     //Attributes

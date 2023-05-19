@@ -1,6 +1,4 @@
-package week05;
-
-import week04.*;
+package dessertShop;
 
 import java.util.Scanner;
 
@@ -64,6 +62,7 @@ public class DessertShop {
             System.out.println (itemName);
         }
 */
+/* commented out for Dessert Shop part 5
 
         for (DessertItem item : order.getOrderList() ){
             String itemName = item.getName();
@@ -76,8 +75,14 @@ public class DessertShop {
         System.out.printf("%-40s$%-8.2f[Tax: $%.2f]\n","Order Subtotals:",order.orderCost(),order.orderTax());
         System.out.printf("%-40s$%-8.2f\n","Order Totals:", order.orderCost()+order.orderTax());
         System.out.printf("%-40s%-8d\n", "Total number of items in the order:", order.itemCount());
+*/
+        for (DessertItem item : order.getOrderList()) {
+            System.out.println(item);
+        }
 
     }
+    // toString method
+
     // UI Methods
     private static DessertItem userPromptCandy(){
         DessertItem candy;

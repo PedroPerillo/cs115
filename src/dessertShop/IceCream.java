@@ -7,7 +7,7 @@
  * @since: May 4, 2023
  */
 
-package week04;
+package dessertShop;
 
 public class IceCream extends DessertItem  {
     //Attributes
