@@ -53,4 +53,15 @@ public class Cookie extends DessertItem {
     public double calculateCost() {
         return (cookieQty*pricePerDozen)/12;
     }
+
+    //toString method
+    public String toString(){
+        String line1 = String.format("%s",this.getName());
+        String line2Pt1 = String.format("%s cookies @ $%-1.2f/Dozen:",this.getCookieQty(),this.getPricePerDozen());
+        String line2Pt2 =String.format("$%.2f",calculateCost());
+        String line2Pt3=String.format("[Tax: $%.2f]",calculateTax());
+
+        String outputVar = String.format("%s\n\t%-45s%s%17s", line1, line2Pt1, line2Pt2, line2Pt3);
+        return outputVar;
+    }
 }

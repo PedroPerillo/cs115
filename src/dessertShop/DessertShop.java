@@ -76,10 +76,8 @@ public class DessertShop {
         System.out.printf("%-40s$%-8.2f\n","Order Totals:", order.orderCost()+order.orderTax());
         System.out.printf("%-40s%-8d\n", "Total number of items in the order:", order.itemCount());
 */
-        for (DessertItem item : order.getOrderList()) {
-            System.out.println(item);
-        }
 
+        System.out.println(order);
     }
     // toString method
 
@@ -95,6 +93,7 @@ public class DessertShop {
         System.out.print("Enter the price per pound: ");
         double price = Double.parseDouble(sIn.nextLine());
         candy = new Candy(type,weight,price);
+        sIn.close();
 
         return candy;
     }
@@ -110,6 +109,7 @@ public class DessertShop {
         double price = Double.parseDouble(sIn.nextLine());
 
         cookie = new Cookie(type,quantity,price);
+        sIn.close();
 
         return cookie;
     }
@@ -125,6 +125,7 @@ public class DessertShop {
         double price = Double.parseDouble(sIn.nextLine());
 
         iceCream = new IceCream(type,quantity,price);
+        sIn.close();
         return iceCream;
     }
     private static DessertItem userPromptSundae(){
@@ -143,6 +144,7 @@ public class DessertShop {
         double toppingPrice = Double.parseDouble(sIn.nextLine());
 
         sundae = new Sundae(type,quantity,price,toppingName,toppingPrice);
+        sIn.close();
         return sundae;
     }
 }

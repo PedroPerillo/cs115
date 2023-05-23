@@ -49,4 +49,15 @@ public class Sundae extends IceCream {
         return super.calculateCost()+toppingPrice;
 
     }
+    //toString method
+    public String toString(){
+        String line1 = String.format("%s",this.getName());
+        String line2 = String.format("%-1s scoops of %s ice cream @ $%.2f /Scoop",getScoopCount(),getName(),getPricePerScoop());
+        String line3Pt1 = String.format("%s topping @ $%.2f:",this.getToppingName(),this.getToppingPrice());
+        String line3Pt2 =String.format("$%.2f",calculateCost());
+        String line3Pt3=String.format("[Tax: $%.2f]",calculateTax());
+
+        String outputVar = String.format("%s\n\t%s\n\t%-45s%s%17s", line1, line2, line3Pt1, line3Pt2, line3Pt3);
+        return outputVar;
+    }
 }
