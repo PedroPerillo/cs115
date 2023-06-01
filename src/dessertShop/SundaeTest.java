@@ -17,7 +17,7 @@ class SundaeTest {
     @Test
     void getToppingName() {
         Sundae sundae = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
-        assertEquals("Sprinkles",sundae.getToppingName());
+        assertEquals("Sprinkle Sundae",sundae.getToppingName());
     }
 
     @Test
@@ -30,7 +30,7 @@ class SundaeTest {
     @Test
     void getToppingPrice() {
         Sundae sundae = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
-        assertEquals(1.50,sundae.getToppingPrice());
+        assertEquals(2.5,sundae.getToppingPrice());
     }
 
     @Test
@@ -44,18 +44,18 @@ class SundaeTest {
     void setToppingPriceNeg() {
         Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
         sundaeSet.setToppingPrice(-2.00);
-        assertEquals(1.50,sundaeSet.getToppingPrice());
+        assertEquals(2.5,sundaeSet.getToppingPrice());
     }
 
     @Test
     void calculateCost() {
         Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
-        assertEquals(6.5,sundaeSet.calculateCost());
+        assertEquals(5.5,sundaeSet.calculateCost());
     }
 
     @Test
     void calculateTax() {
         Sundae sundaeSet = new Sundae("Sprinkles",2,1.50,"Sprinkle Sundae",2.5);
-        assertEquals(6.5*(7.25/100),sundaeSet.calculateTax());
+        assertEquals(5.5*(7.25/100),sundaeSet.calculateTax());
     }
 }

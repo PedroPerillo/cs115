@@ -9,13 +9,16 @@
 
 package dessertShop;
 
-public abstract class DessertItem {
+public abstract class DessertItem implements Packaging {
     //Attributes
     private String name;
     private double taxPercent = 7.25;
+
+    private  String packaging;
     //No argument constructor
     public DessertItem(){
         name = "Dessert";
+        packaging ="Packaging";
     }
 
     //Argument constructor
@@ -47,5 +50,16 @@ public abstract class DessertItem {
         return (taxPercent/100) * calculateCost();
     }
 
+    // Packaging getter and setter
 
+
+    @Override
+    public String getPackaging() {
+        return packaging;
+    }
+
+    @Override
+    public void setPackaging(String packaging) {
+        this.packaging = packaging;
+    }
 }

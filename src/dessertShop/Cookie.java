@@ -19,6 +19,7 @@ public class Cookie extends DessertItem {
         super("Cookie");
         cookieQty = 0;
         pricePerDozen = 0;
+        setPackaging("");
     }
 
     //argument constructor
@@ -26,6 +27,7 @@ public class Cookie extends DessertItem {
         super(name);
         this.cookieQty = cookieQty;
         this.pricePerDozen = pricePerDozen;
+        setPackaging("Box");
     }
 
     //Setters ang Getters
@@ -57,11 +59,12 @@ public class Cookie extends DessertItem {
     //toString method
     public String toString(){
         String line1 = String.format("%s",this.getName());
+        String line1Packaging = String.format("%s", this.getPackaging());
         String line2Pt1 = String.format("%s cookies @ $%-1.2f/Dozen:",this.getCookieQty(),this.getPricePerDozen());
         String line2Pt2 =String.format("$%.2f",calculateCost());
         String line2Pt3=String.format("[Tax: $%.2f]",calculateTax());
 
-        String outputVar = String.format("%s\n\t%-45s%s%17s", line1, line2Pt1, line2Pt2, line2Pt3);
+        String outputVar = String.format("%s (%s)\n\t%-45s%s%17s", line1, line1Packaging, line2Pt1, line2Pt2, line2Pt3);
         return outputVar;
     }
 }

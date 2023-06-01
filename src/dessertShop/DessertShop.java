@@ -93,7 +93,7 @@ public class DessertShop {
         System.out.print("Enter the price per pound: ");
         double price = Double.parseDouble(sIn.nextLine());
         candy = new Candy(type,weight,price);
-        sIn.close();
+
 
         return candy;
     }
@@ -109,7 +109,7 @@ public class DessertShop {
         double price = Double.parseDouble(sIn.nextLine());
 
         cookie = new Cookie(type,quantity,price);
-        sIn.close();
+
 
         return cookie;
     }
@@ -125,7 +125,7 @@ public class DessertShop {
         double price = Double.parseDouble(sIn.nextLine());
 
         iceCream = new IceCream(type,quantity,price);
-        sIn.close();
+
         return iceCream;
     }
     private static DessertItem userPromptSundae(){
@@ -144,7 +144,7 @@ public class DessertShop {
         double toppingPrice = Double.parseDouble(sIn.nextLine());
 
         sundae = new Sundae(type,quantity,price,toppingName,toppingPrice);
-        sIn.close();
+
         return sundae;
     }
 }

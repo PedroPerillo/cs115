@@ -19,12 +19,14 @@ public class Sundae extends IceCream {
         super("Sundae", 0,0);
         toppingName = "";
         toppingPrice = 0;
+        setPackaging("");
     }
     //argument constructor
     public Sundae(String name, int scoopCount, double pricePerScoop, String toppingName, double toppingPrice){
         super(name, scoopCount, pricePerScoop);
         this.toppingName = toppingName;//this meas the class
         this.toppingPrice = toppingPrice;
+        setPackaging("Boat");
     }
 
     //Setters ang Getters
@@ -52,12 +54,13 @@ public class Sundae extends IceCream {
     //toString method
     public String toString(){
         String line1 = String.format("%s",this.getName());
+        String line1Packaging = String.format("%s", this.getPackaging());
         String line2 = String.format("%-1s scoops of %s ice cream @ $%.2f /Scoop",getScoopCount(),getName(),getPricePerScoop());
         String line3Pt1 = String.format("%s topping @ $%.2f:",this.getToppingName(),this.getToppingPrice());
         String line3Pt2 =String.format("$%.2f",calculateCost());
         String line3Pt3=String.format("[Tax: $%.2f]",calculateTax());
 
-        String outputVar = String.format("%s\n\t%s\n\t%-45s%s%17s", line1, line2, line3Pt1, line3Pt2, line3Pt3);
+        String outputVar = String.format("%s (%s)\n\t%s\n\t%-45s%s%17s", line1, line1Packaging, line2, line3Pt1, line3Pt2, line3Pt3);
         return outputVar;
     }
 }

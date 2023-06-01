@@ -16,7 +16,7 @@ class CookieTest {
 
     @Test
     void getCookieQty() {
-        Cookie cookie = new Cookie();
+        Cookie cookie = new Cookie("Chocolate Chip",10, 5.00);
         assertEquals(10, cookie.getCookieQty());
     }
 
