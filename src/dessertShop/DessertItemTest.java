@@ -22,8 +22,7 @@ class DessertItemTest {
     @Test
     void getTaxPercent() {
         DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
-        double tax = iceCream.getTaxPercent();
-        assertEquals(7.25,tax);
+        assertEquals(7.25,iceCream.getTaxPercent());
     }
 
     @Test
@@ -31,6 +30,18 @@ class DessertItemTest {
         DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
         iceCream.setTaxPercent(8);
         assertEquals(8,iceCream.getTaxPercent());
+    }
+
+    @Test
+    void getPackaging(){
+        DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
+        assertEquals("Bowl",iceCream.getPackaging());
+    }
+    @Test
+    void setPackaging(){
+        DessertItem iceCream = new IceCream ("Ice Cream",3,0.79);
+        iceCream.setPackaging("Pint");
+        assertEquals("Pint",iceCream.getPackaging());
     }
 
 }

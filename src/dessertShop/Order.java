@@ -4,10 +4,14 @@ package dessertShop;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
+public class Order implements Payable {
+    // Attributes
     private final List<DessertItem> order;
+    private PayType payMethod;
+
     public Order(){
         this.order = new ArrayList<DessertItem>();
+        payMethod = PayType.CASH;
     }
     public List<DessertItem> getOrderList(){
         return order;
@@ -45,10 +49,22 @@ public class Order {
         String line5 = String.format("%-49s$%-9.2f[Tax: $%.2f]\n","Order Subtotals:",this.orderCost(),this.orderTax());
         String line6 = String.format("%-49s$%-9.2f\n","Order Totals:", this.orderCost()+this.orderTax());
         String line7 = "-------------------------------------------------------------------\n";
+        String payment = String.format("Paid for visit with %s", getPayType());
         for (DessertItem item : this.order) {
             line2 += item +"\n";
         }
 
-        return line1 + line2 + line3 + line4 + line5 + line6 + line7;
+        return line1 + line2 + line3 + line4 + line5 + line6 + line7+ payment;
+    }
+
+    @Override
+    public PayType getPayType() {
+        return payMethod;
+    }
+
+    @Override
+    public void setPayType(PayType payType) {
+        this.payMethod = payType;
+
     }
 }

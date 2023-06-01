@@ -4,8 +4,11 @@ import java.util.Scanner;
 
 public class DessertShop {
     public static void main(String[]args){
-
+        //attributes
         Order order = new Order();
+        String paymentMethod = "";
+
+
 
         Scanner sIn = new Scanner(System.in);
         String choice;
@@ -76,6 +79,24 @@ public class DessertShop {
         System.out.printf("%-40s$%-8.2f\n","Order Totals:", order.orderCost()+order.orderTax());
         System.out.printf("%-40s%-8d\n", "Total number of items in the order:", order.itemCount());
 */
+        //Form of payment
+        done = false;
+        while (!done) {
+            System.out.println("What form of payment will be used? (CASH, CARD, PHONE):");
+            paymentMethod = sIn.nextLine();
+
+            for (Payable.PayType type: Payable.PayType.values()) {
+                if (paymentMethod.equals(type.name())){
+                    order.setPayType(Payable.PayType.valueOf(paymentMethod));
+                }
+
+            }
+            switch (paymentMethod.toUpperCase()){
+                case "CASH","CARD","PHONE" -> done = true;
+                default -> System.out.println("That's not a valid form of payment.");
+            }
+
+        }
 
         System.out.println(order);
     }
